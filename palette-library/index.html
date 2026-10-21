@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palette Library</title>
+  <meta name="description" content="All palettes used to sprite a Pokémon">
+  <meta property="og:site_name" content="Spriter Helper">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Palette Library">
+  <meta property="og:description" content="All palettes used to sprite a Pokémon">
+  <meta property="og:url" content="https://tullio-official.github.io/pif-spriter-helper/palette-library/">
+  <meta property="og:image" content="https://tullio-official.github.io/pif-spriter-helper/assets/og.png">
+  <meta name="theme-color" content="#f6cf42">
+  <script src="../shared/theme.js"></script>
+  <link rel="stylesheet" href="../shared/pixel.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/logo-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/logo-32.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="art">
+      <div id="page" data-full>
+        <main id="main">
+          <!-- top bar -->
+          <div id="bar">
+            <div class="field" id="search" data-box>
+              <div class="textbox" data-skin="dark-pressed" data-slice="7"></div>
+              <i class="glass"></i>
+              <input id="pick" autocomplete="off" spellcheck="false" placeholder="Select a Pokémon">
+              <div id="drop" data-box hidden></div>
+            </div>
+            <div class="seg" id="filter" data-box></div>
+            <div id="tools">
+              <div class="seg" id="view" data-box></div>
+              <div class="seg" id="size" data-box></div>
+              <div id="sort" data-box>
+                <button class="tbtn" id="sort-btn" type="button"><div class="textbox" data-skin="dark" data-slice="7"></div><div class="textbox" data-skin="dark-pressed" data-slice="7"></div><span></span><i class="arrow"></i></button>
+                <div id="sort-menu" data-box hidden></div>
+              </div>
+            </div>
+          </div>
+          <div id="heading">
+            <h2 id="title"></h2>
+            <p id="stats"></p>
+          </div>
+          <div id="body">
+            <div id="list"></div>
+            <div class="bar"><div class="thumb"></div></div>
+          </div>
+        </main>
+
+        <aside id="panel" data-box>
+          <div class="textbox" data-skin="dark" data-slice="7"></div>
+          <div class="check"></div>
+          <div id="pview"><div id="pcontent"></div></div>
+          <div class="bar"><div class="thumb"></div></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <script src="../shared/site.js"></script>
+  <script src="../shared/pixel.js"></script>
+  <script src="../shared/colour.js"></script>
+  <script src="../shared/scroll.js"></script>
+  <script src="../shared/names.js"></script>
+  <script src="app.js"></script>
+  <div id="parsed" hidden></div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A collection of little and big tools I made to help you sprite for Pokémon Infinite Fusion">
+  <title>Spriter Helper</title>
+  <meta property="og:site_name" content="Spriter Helper">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spriter Helper">
+  <meta property="og:description" content="A collection of little and big tools I made to help you sprite for Pokémon Infinite Fusion">
+  <meta property="og:url" content="https://tullio-official.github.io/pif-spriter-helper/">
+  <meta property="og:image" content="https://tullio-official.github.io/pif-spriter-helper/assets/og.png">
+  <meta name="theme-color" content="#f6cf42">
+  <script src="shared/theme.js"></script>
+  <link rel="stylesheet" href="shared/pixel.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo-32.png">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="art">
+      <div id="page" data-full>
+        <main id="main">
+          <!-- main view -->
+          <div id="view">
+            <div id="content">
+              <p id="intro">A collection of little and big tools I made to help you sprite for Pokémon Infinite Fusion</p>
+              <div id="columns">
+                <section id="tools">
+                  <h2 id="tools-title">Tools</h2>
+                  <nav id="cards"></nav>
+                </section>
+                <section id="today">
+                  <h2 id="today-title">Today's undersprited Pokémon</h2>
+                  <!-- daily pick -->
+                  <div id="daily"></div>
+                </section>
+              </div>
+              <footer id="footer">
+                <p>Not directly affiliated with Pokémon Infinite Fusion</p>
+                <p>Pokémon belongs to Nintendo, Creatures and Game Freak</p>
+              </footer>
+            </div>
+          </div>
+          <div class="bar"><div class="thumb"></div></div>
+        </main>
+
+        <aside id="panel" data-box>
+          <div class="textbox" data-skin="dark" data-slice="7"></div>
+          <div class="check"></div>
+          <!-- what's new -->
+          <div id="pview"><div id="pcontent"><div class="phead"><h2 class="x2">What's new</h2></div><ol id="updates"></ol></div></div>
+          <div class="bar"><div class="thumb"></div></div>
+          <!-- contact -->
+          <div id="contact">
+            <div class="bubble"><span>Found a bug or<br>want a new feature?</span></div>
+            <a id="discord" target="_blank" rel="noopener" title="Opens my Discord profile in a new tab" aria-label="Message tullio_official on Discord, opens in a new tab" data-box>
+              <div class="textbox" data-skin="dark" data-slice="7"></div>
+              <div class="textbox" data-skin="dark-pressed" data-slice="7"></div>
+              <img src="assets/icons/avatar.png" width="24" height="24" alt="">
+              <span class="name">tullio_official<i class="out"></i></span>
+              <span class="action">Message me on Discord</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <script src="shared/site.js"></script>
+  <script src="shared/pixel.js"></script>
+  <script src="shared/colour.js"></script>
+  <script src="shared/scroll.js"></script>
+  <script src="shared/names.js"></script>
+  <script src="news.js"></script>
+  <script src="home.js"></script>
+  <div id="parsed" hidden></div>
+</body>
+</html>
