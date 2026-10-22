@@ -214,26 +214,18 @@ h1.x2, h2.x2, .title.x2 { font-size: 40px; line-height: 40px; }
     5px calc(100% - 1px), 3px calc(100% - 1px), 3px calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 3px),
     1px calc(100% - 3px), 1px calc(100% - 5px), 0 calc(100% - 5px), 0 5px, 1px 5px, 1px 3px, 2px 3px, 2px 2px, 3px 2px,
     3px 1px, 5px 1px); }
-.bubble::after { left: calc(var(--tail) - 3px); bottom: 0; width: 6px; height: 3px;
-  clip-path: polygon(0 0, 6px 0, 6px 1px, 5px 1px, 5px 2px, 4px 2px, 4px 3px, 2px 3px, 2px 2px, 1px 2px, 1px 1px, 0 1px); }
+.bubble::after { left: calc(var(--tail) - 3px); bottom: 0; width: 6px; height: 5px;
+  clip-path: polygon(0 0, 6px 0, 6px 3px, 5px 3px, 5px 4px, 4px 4px, 4px 5px, 2px 5px, 2px 4px, 1px 4px, 1px 3px, 0 3px); }
 .bubble.under { padding: 6px 7px 5px 8px; }
 .bubble.under::before { inset: 3px 0 0; }
 .bubble.under::after { top: 0; bottom: auto;
-  clip-path: polygon(2px 0, 4px 0, 4px 1px, 5px 1px, 5px 2px, 6px 2px, 6px 3px, 0 3px, 0 2px, 1px 2px, 1px 1px, 2px 1px); }
+  clip-path: polygon(2px 0, 4px 0, 4px 1px, 5px 1px, 5px 2px, 6px 2px, 6px 5px, 0 5px, 0 2px, 1px 2px, 1px 1px, 2px 1px); }
 .bubble.right { padding: 3px 7px 5px 11px; }
 .bubble.right::before { inset: 0 0 0 3px; }
-.bubble.right::after { left: 0; top: calc(50% - 3px); bottom: auto; width: 3px; height: 6px;
-  clip-path: polygon(2px 0, 3px 0, 3px 6px, 2px 6px, 2px 5px, 1px 5px, 1px 4px, 0 4px, 0 2px, 1px 2px, 1px 1px, 2px 1px); }
+.bubble.right::after { left: 0; top: calc(50% - 3px); bottom: auto; width: 5px; height: 6px;
+  clip-path: polygon(2px 0, 5px 0, 5px 6px, 2px 6px, 2px 5px, 1px 5px, 1px 4px, 0 4px, 0 2px, 1px 2px, 1px 1px, 2px 1px); }
 :root[data-theme="dark"] .bubble { color: #121b26; }
 :root[data-theme="dark"] .bubble::before, :root[data-theme="dark"] .bubble::after { background: #f6f2ee; }
-.bubble.skinned, :root[data-theme="dark"] .bubble.skinned { color: var(--ink); }
-.bubble.skinned::before, .bubble.skinned::after { content: none; }
-.bubble.skinned > .textbox { position: absolute; inset: 0 0 3px; }
-.bubble.skinned > .tail { position: absolute; left: calc(var(--tail) - 3px); bottom: 0; }
-.bubble.skinned.under > .textbox { inset: 3px 0 0; }
-.bubble.skinned.under > .tail { top: 0; bottom: auto; transform: rotate(180deg); }
-.bubble.skinned.right > .textbox { inset: 0 0 0 3px; }
-.bubble.skinned.right > .tail { left: 1.5px; top: 50%; bottom: auto; transform: translate(-50%, -50%) rotate(90deg); }
 
 /* ---------- page swap ---------- */
 @view-transition { navigation: auto; }

@@ -11,10 +11,6 @@
   const SITE = 'Spriter Helper';
   const FEEDBACK = 'https://discord.com/users/555046719406997552';
 
-  // tooltip
-  const SKIN = '';
-  const SKIN_SLICE = '7';
-
   const home = new URL('../', document.currentScript.src).href;
   const here = new URL('./', location.href).href;
   const page = here.startsWith(home) ? here.slice(home.length).replace(/\/$/, '') : '';
@@ -129,13 +125,6 @@
       }
       shape.style.left = left + 'px';
       shape.style.top = top + 'px';
-    }
-    if (SKIN) {
-      const textbox = make('div', { className: 'textbox' });
-      textbox.dataset.skin = SKIN;
-      textbox.dataset.slice = SKIN_SLICE;
-      shape.classList.add('skinned');
-      shape.prepend(textbox, make('img', { className: 'tail', src: `${prefix}assets/textboxes/${SKIN}-tail.png`, alt: '' }));
     }
     layer.append(shape);
     return shape;
