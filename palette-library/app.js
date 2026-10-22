@@ -1203,6 +1203,7 @@
   addEventListener('resize', () => requestAnimationFrame(fit));
   addEventListener('themechange', () => requestAnimationFrame(fit));
   new ResizeObserver(() => fit()).observe(art);
+  document.fonts.load('20px jersey').then(fit);
   layer.fit();
   route(true);
 })();
