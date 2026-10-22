@@ -319,13 +319,16 @@
   });
 
   function image(ramps) {
-    const lines = rows(ramps);
-    const canvas = make('canvas', { width: Math.max(...lines.map(line => line.length)) * 2, height: lines.length * 2 });
+    const lines = rows(ramps), width = Math.max(...lines.map(line => line.length));
+    const canvas = make('canvas', { width: width * 2, height: lines.length * 2 });
     const context = canvas.getContext('2d');
-    lines.forEach((line, down) => line.forEach((hex, across) => {
-      context.fillStyle = '#' + hex;
-      context.fillRect(across * 2, down * 2, 2, 2);
-    }));
+    // padding short rows
+    lines.forEach((line, down) => {
+      for (let across = 0; across < width; across++) {
+        context.fillStyle = '#' + line[Math.min(across, line.length - 1)];
+        context.fillRect(across * 2, down * 2, 2, 2);
+      }
+    });
     return canvas;
   }
   const blob = canvas => new Promise((resolve, reject) => canvas.toBlob(blobbed => blobbed ? resolve(blobbed) : reject(), 'image/png'));
